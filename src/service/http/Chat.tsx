@@ -1,5 +1,6 @@
 // service/http/Chat.ts
 const serverAddress = 'https://mee.chatbot.api.thetigerteamacademy.net';
+// const serverAddress = 'http://localhost:5001'
 
 export interface ChatFormData {
   user_input: string;
@@ -22,6 +23,7 @@ export const CreateChat = async (formData: ChatFormData) => {
     return data;
   } catch (error) {
     console.error('Failed to create chat:', error);
+    console.log(error)
     return null;
   }
 };
